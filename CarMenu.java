@@ -32,7 +32,8 @@ public class CarMenu {
     }
 
     private void enterCarDetails() {
-        if (count >= 1) {
+        int maxCars = 20;
+        if (count >= maxCars) {
             System.out.println("Sorry, you have reached the maximum number of cars");
             kbr.getString("Press enter to continue");
             RunMenu();
@@ -49,8 +50,10 @@ public class CarMenu {
 
     private void displayCars() {
         if (null == cars[0]) System.out.println("Car : NOT YET DEFINED!");
-        else for (int i = 0; i < cars.length; i++) {
-            if (null != cars[i]) System.out.println((i + 1) + "." + cars[i].showCarDetails());
+        else {
+            for (int i = 0; i < cars.length; i++) {
+                if (null != cars[i]) System.out.println((i + 1) + "." + cars[i].showCarDetails());
+            }
         }
         kbr.getString("Press enter to continue");
     }

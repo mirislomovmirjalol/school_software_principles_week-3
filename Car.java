@@ -39,7 +39,7 @@ public class Car {
      * @author W3spoint
      */
     String showCarDetails() {
-        return "Name: " + carName + " Color: " + carColor + "\tSpeed: " + carSpeed;
+        return "Name: " + carName + "\tColor: " + carColor + "\tSpeed: " + carSpeed;
     }
     String getCarName() {
         return carName;
